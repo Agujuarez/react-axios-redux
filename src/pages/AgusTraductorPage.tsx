@@ -1,10 +1,17 @@
 import React, { useState } from 'react';
+import {traductor} from "../services/traductor"
 
 const AgusTraductorPage: React.FC = () => {
+  const [texto, setTexto] = useState('');
   const [text, setText] = useState('');
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setText(event.target.value);
+    setTexto(event.target.value);
+  };
+
+  const handleTranslate = async () => {
+    const x:string = await traductor(texto)
+    setText(x);
   };
 
   return (
@@ -13,11 +20,13 @@ const AgusTraductorPage: React.FC = () => {
       <p>Enter text to translate:</p>
       <input 
         type="text" 
-        value={text} 
+        value={texto} 
         onChange={handleInputChange} 
         placeholder="Texto en español" 
       />
-      <p>Texto en español: {text}</p>
+      <button onClick={handleTranslate}>Translate</button>
+      <p>Texto en español: {texto}</p>
+      <p>Texto en ingles: {text}</p>
     </div>
   );
 };

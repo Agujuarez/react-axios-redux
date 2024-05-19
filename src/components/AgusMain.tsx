@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import About from '../pages/About';
-import Contact from '../pages/AgusTraductorPage';
+import AgusTraductorPage from '../pages/AgusTraductorPage';
 
 const AgusMain: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const AgusMain: React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/traductor" element={<AgusTraductorPage />} />
       </Routes>
     </div>
   );
