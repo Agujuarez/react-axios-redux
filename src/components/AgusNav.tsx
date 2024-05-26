@@ -13,6 +13,9 @@ export default function AgusNav() {
         <li>
           <Link to="/traductor">Traductor</Link>
         </li>
+        <li>
+          <Link to="/ChuckNorrisJokes">Chuck Norris Jokes </Link>
+        </li>
       </ul>
     </nav>
   );
