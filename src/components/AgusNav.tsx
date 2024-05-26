@@ -8,7 +8,7 @@ export default function AgusNav() {
           <Link to="/">Home</Link>
         </li>
         <li>
-          <Link to="/about">About</Link>
+          <Link to="/Weather">Weather</Link>
         </li>
         <li>
           <Link to="/traductor">Traductor</Link>
